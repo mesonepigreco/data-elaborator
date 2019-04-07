@@ -10,10 +10,17 @@ To run the program you need to have installed python language
 - matplotlib
 
 You can easily find them on the web.
-To run, just compile the Main.py file, like:
-python Main.py
 
-HOW TO USE: -------------------
+## Installation guide
+
+Just type on the terminal
+```
+python setup.py install --user
+```
+
+This will install the data-elaborator just for the current user, without need to access as a superuser. 
+
+## How to use data-elaborator
 
 Scientific data-elaborator is compleately based on Tables. To start a project you nead to import a table or
 create a new one. To create a new table, go to the Toolbar menu, and click on "Create Table". 
@@ -29,7 +36,7 @@ If the file is correctly formatted a new window will appear with the given data.
 From the 0.2 it is possible to extend the functionality of the program using the scripting language python2.
 See the section on costum action for more information.
 
-MANAGE TABLE:
+### Manage tables
 You can add columns or rows to an existing table, using the appropriate tools in the File menu of the Table window.
 Every new column will have a default name with an uppercase letter, in order to avoid existing names. You can
 easily modify the column name: right click on the column label, and select "Set Column Name" option.
@@ -42,7 +49,7 @@ The last option indicates the role that the column will have in the plot and in 
 
 Other options are avable, like sorting data, delete columns, set column values.
 
-ERROR PROPAGATION:
+### Error propagation
 You can easily calculate new values using the data into the table. Add one or two columns (two if you want to extimate
 the error over the new value calculated), then left click on the new column's label, and select "Set Column Values".
 
@@ -53,21 +60,20 @@ error column for the columns choosen in your expression). Select then the column
 If a column has a constant error, you need to create an error column which contain the same value in all the rows. 
 This can easily be done with right-click on the column label, "Set Column Value", and choose the value for the error.
 
-COPY AND PASTE:
+### Copy and paste
 You can copy a whole column, right click on the column label, and choose "Copy Column".
 Then right click on the empty column in which you want to paste the column values and select "Paste".
 Pay attention! The data contained in the last column will be overwritten, and there is no possibility to undo
 this operation.
-e
-SAVE DATA:
+
+### Export data
 You can save the table, go tu "Options" menu, and select "Save".
 
-EXPORT LATEX CODE:
 You can generate latex code for the column, well formatted, putting error in tiny way (value +- error),
 using the correct number of digits, and when necessary using scientific notation. The generated file can be directly compiled,
 or you can copy the text easily in your relations.
 
-PLOT DATA:
+### Plot data
 To plot the data of the table you need to choose which column represents X axis and which the Y.
 Select the column, right click on the label, and choose "Edit Column Proprieties".
 The last box is the role, you can set it in "X", "Y" or "None".
@@ -85,7 +91,7 @@ click on the V button.
 You can save it with the corrispondent button as image.
 If you want to display the fit on your plot, run the plot AFTER the fitting process.
 
-FIT DATA:
+### Non-linear regressions and fit
 You can fit data easily. First you need to tell the program which column represent the X axis an wich one
 the Y. Choose the error column for the Y axis (see MANAGE TABLE section). When you are ready, select
 "Plot and Analyze" menu -> "Non linear Fit".
@@ -108,14 +114,14 @@ like every "y" value has sigma as 1 (so it is almost non sense).
 
 After you have compleated a Fit, you can see the risult simply plotting your data, the fitting curve will be displayed over data.
 
-COSTUM ACTIONS:
+### Scripting and plugin
 It is possible to costumize the data-elaborator with the new scripting function.
 On the Data menu of the table window there is a comand to execute python scripts.
 A costum script is the executed by the program.
 The script must have a main function that accepts two arguments, the first is the complete data of the table stored as a numpy array, the second contains the column names.
 It can be usefull for user defined plot, as the plotting wizard is still incomplete.
 
-TIME-RESOLVED ANALYZER
+## Time resolver analyzer
 The time resolved analyzer is a tool that allows the user to easily 
 analyze time resolved periodic signal.
 The analyzer has been written for analyze data coming from Impulsive 
@@ -136,8 +142,8 @@ the first column the respective information of the mesure.
 In the IVS the first column contains the probe wavelength (we have a 
 different set of data in time for each wavelength of the detection).
 
-The analyze data Applies some filters to the data and perform a fourier 
-analysys of the signals. Than the results are shown in the two graphs in 
+The 'analyze data' function applies some filters to the data and perform a fourier 
+analysys of the signals. Then the results are shown in the two graphs in 
 the right side of the panel. 
 The results are averaged on all given data to reduce the noise (better results can be obtained discarding noisier 
 data acquisitions).
