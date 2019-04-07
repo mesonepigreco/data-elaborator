@@ -22,6 +22,13 @@ This will install the data-elaborator just for the current user, without need to
 
 ## How to use data-elaborator
 
+To run the program, just execute the script from the command line as:
+```
+data-elaborator
+```
+
+You can also create a desktop shortcut for it.
+
 Scientific data-elaborator is compleately based on Tables. To start a project you nead to import a table or
 create a new one. To create a new table, go to the Toolbar menu, and click on "Create Table". 
 A window dialog will appear, in which you have to insert the number of rows and columns of the new table.
